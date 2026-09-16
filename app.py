@@ -3,8 +3,7 @@ import sqlite3
 from datetime import datetime
 from dotenv import load_dotenv
 import os
-import smtplib
-from email.message import EmailMessage
+import resend
 
 
 # ==========================================
@@ -79,36 +78,23 @@ def init_database():
 # ==========================================
 
 def send_email(to_email, subject, body):
-
     try:
+        resend.api_key = os.getenv("RESEND_API_KEY")
 
-        message = EmailMessage()
+        params = {
+            "from": "onboarding@resend.dev",
+            "to": [to_email],
+            "subject": subject,
+            "text": body
+        }
 
-        message["From"] = MAIL_USERNAME
-        message["To"] = to_email
-        message["Subject"] = subject
-
-        message.set_content(body)
-
-        with smtplib.SMTP(MAIL_SERVER, MAIL_PORT) as server:
-
-            server.starttls()
-
-            server.login(
-                MAIL_USERNAME,
-                MAIL_PASSWORD
-            )
-
-            server.send_message(message)
+        resend.Emails.send(params)
 
         return True
 
     except Exception as e:
-
         print("Email sending failed:", e)
-
         return False
-
 
 # ==========================================
 # HOME PAGE
