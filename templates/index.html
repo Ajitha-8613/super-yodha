@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Super Yodha — The Ninth Guardian. An immersive superhero experience.">
+
+    <title>SUPER YODHA | The Ninth Guardian</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- ==========================================
+         ANIMATED BACKGROUND
+    =========================================== -->
+
+    <div class="background-effects">
+
+        <div class="cosmic-glow"></div>
+
+        <div class="energy-ring ring-one"></div>
+        <div class="energy-ring ring-two"></div>
+
+        <div class="particles" id="particles"></div>
+
+    </div>
+
+
+    <!-- ==========================================
+         NAVIGATION BAR
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            SUPER <span>YODHA</span>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle">
+            ☰
+        </button>
+
+        <nav id="navMenu">
+
+            <a href="#home">HOME</a>
+            <a href="#origin">ORIGIN</a>
+            <a href="#powers">POWERS</a>
+            <a href="#mission">MISSION</a>
+            <a href="#personality">PERSONALITY</a>
+            <a href="#help">HELP</a>
+            <a href="/admin">ADMIN</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==========================================
+         HERO SECTION
+    =========================================== -->
+
+    <main>
+
+        <section id="home" class="hero-section">
+
+            <div class="hero-content">
+
+                <p class="hero-small-title">
+                    THE NINTH GUARDIAN
+                </p>
+
+                <h1>
+                    SUPER <span>YODHA</span>
+                </h1>
+
+                <h2>
+                    VEDHA
+                </h2>
+
+                <p class="hero-tagline">
+                    Born to guard the ninth scripture.
+                    Destined to protect the world.
+                </p>
+
+                <p class="hero-intro">
+                    Vedha was an ordinary street-smart orphan working in a
+                    scrap yard. But behind his ordinary life lies an ancient
+                    destiny. He is the chosen guardian of the ninth sacred
+                    scripture — and the only force capable of standing against
+                    the darkness seeking its power.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#help" class="btn primary-btn">
+                        REQUEST HELP
+                    </a>
+
+                    <a href="#origin" class="btn secondary-btn">
+                        EXPLORE HERO
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- HERO IMAGE -->
+
+            <div class="hero-image-container">
+
+                <div class="hero-energy"></div>
+
+                <img
+                    src="{{ url_for('static', filename='images/super-yodha-hero.png') }}"
+                    alt="Super Yodha Vedha, the Ninth Guardian"
+                    class="hero-image"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             ORIGIN
+        =========================================== -->
+
+        <section id="origin" class="section origin-section">
+
+            <div class="section-heading">
+
+                <p>THE LEGEND BEGINS</p>
+
+                <h2>THE ORIGIN</h2>
+
+            </div>
+
+
+            <div class="origin-story">
+
+                <div class="story-card">
+
+                    <div class="story-number">
+                        01
+                    </div>
+
+                    <h3>Emperor Ashoka</h3>
+
+                    <p>
+                        The lore of Mirai dates back centuries to Emperor
+                        Ashoka. Haunted by the bloodbath of the Kalinga War,
+                        Ashoka turned to peace and sealed ultimate divine
+                        knowledge into nine sacred scriptures (granthas).
+                    </p>
+
+                </div>
+
+
+                <div class="story-card">
+
+                    <div class="story-number">
+                        02
+                    </div>
+
+                    <h3>The Nine Scriptures</h3>
+
+                    <p>
+                        A secret society of monks was tasked with guarding
+                        these books, which have the power to turn a mortal
+                        into a god.
+                    </p>
+
+                </div>
+
+
+                <div class="story-card">
+
+                    <div class="story-number">
+                        03
+                    </div>
+
+                    <h3>Mahabir Lama</h3>
+
+                    <p>
+                        Generations later, a ruthless villain named Mahabir
+                        Lama successfully steals eight of the scriptures to
+                        gain immortality and dark powers.
+                    </p>
+
+                </div>
+
+
+                <div class="story-card">
+
+                    <div class="story-number">
+                        04
+                    </div>
+
+                    <h3>Vibha Finds Vedha</h3>
+
+                    <p>
+                        To stop him, a sanyasini named Vibha tracks down
+                        Vedha — a carefree, street-smart orphan working in
+                        a scrap yard.
+                    </p>
+
+                </div>
+
+
+                <div class="story-card">
+
+                    <div class="story-number">
+                        05
+                    </div>
+
+                    <h3>The Ninth Scripture</h3>
+
+                    <p>
+                        Vibha reveals that Vedha is the prophesied protector
+                        born to guard the ninth and final scripture.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- TIMELINE -->
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <span>01</span>
+                    <div>
+                        <h3>Emperor Ashoka</h3>
+                        <p>Kalinga War changes Ashoka; he turns to peace.</p>
+                    </div>
+                </div>
+
+
+                <div class="timeline-item">
+                    <span>02</span>
+                    <div>
+                        <h3>Nine Scriptures</h3>
+                        <p>Ultimate divine knowledge is sealed into nine sacred granthas.</p>
+                    </div>
+                </div>
+
+
+                <div class="timeline-item">
+                    <span>03</span>
+                    <div>
+                        <h3>Secret Monks</h3>
+                        <p>A secret society protects the scriptures for generations.</p>
+                    </div>
+                </div>
+
+
+                <div class="timeline-item">
+                    <span>04</span>
+                    <div>
+                        <h3>Mahabir Lama</h3>
+                        <p>Eight scriptures are stolen in the quest for immortality.</p>
+                    </div>
+                </div>
+
+
+                <div class="timeline-item">
+                    <span>05</span>
+                    <div>
+                        <h3>Vibha Finds Vedha</h3>
+                        <p>Vibha discovers the ordinary orphan behind the prophecy.</p>
+                    </div>
+                </div>
+
+
+                <div class="timeline-item">
+                    <span>06</span>
+                    <div>
+                        <h3>Ninth Scripture</h3>
+                        <p>Vedha learns that he is the prophesied guardian.</p>
+                    </div>
+                </div>
+
+
+                <div class="timeline-item">
+                    <span>07</span>
+                    <div>
+                        <h3>SUPER YODHA</h3>
+                        <p>Vedha embraces his destiny.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             POWERS
+        =========================================== -->
+
+        <section id="powers" class="section powers-section">
+
+            <div class="section-heading">
+
+                <p>THE POWER WITHIN</p>
+
+                <h2>POWERS &amp; ABILITIES</h2>
+
+            </div>
+
+
+            <div class="powers-grid">
+
+
+                <article class="power-card">
+
+                    <div class="power-icon">🏹</div>
+
+                    <h3>MIRAI</h3>
+
+                    <h4>THE CELESTIAL BOW</h4>
+
+                    <p>
+                        Vedha wields Mirai, a mythical celestial bow heavily
+                        associated with Lord Rama's legendary bow, Kodanda.
+                        It channels immense divine light and energy capable
+                        of shattering dark magic.
+                    </p>
+
+                </article>
+
+
+                <article class="power-card">
+
+                    <div class="power-icon">⚔️</div>
+
+                    <h3>MYTHIC MARTIAL ARTS</h3>
+
+                    <p>
+                        Vedha transitions from a street brawler into a
+                        master warrior with extraordinary combat abilities.
+                    </p>
+
+                </article>
+
+
+                <article class="power-card">
+
+                    <div class="power-icon">💪</div>
+
+                    <h3>SUPERHUMAN STRENGTH</h3>
+
+                    <p>
+                        After embracing his destiny, Vedha gains immense
+                        physical strength.
+                    </p>
+
+                </article>
+
+
+                <article class="power-card">
+
+                    <div class="power-icon">⚡</div>
+
+                    <h3>HYPER-AGILITY</h3>
+
+                    <p>
+                        Exceptional reflexes, speed, balance and agility
+                        allow Vedha to move beyond ordinary human limits.
+                    </p>
+
+                </article>
+
+
+                <article class="power-card">
+
+                    <div class="power-icon">📜</div>
+
+                    <h3>SCRIPTURE SYNERGY</h3>
+
+                    <p>
+                        Vedha's life force is bound to the sacred text,
+                        granting spiritual fortitude and the ability to
+                        counter dark and unnatural powers.
+                    </p>
+
+                </article>
+
+
+                <article class="power-card">
+
+                    <div class="power-icon">✨</div>
+
+                    <h3>DIVINE ENERGY</h3>
+
+                    <p>
+                        Vedha channels celestial energy through Mirai,
+                        transforming spiritual power into devastating light.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             MISSION
+        =========================================== -->
+
+        <section id="mission" class="section mission-section">
+
+            <div class="mission-content">
+
+                <div class="section-heading">
+
+                    <p>THE GUARDIAN'S PURPOSE</p>
+
+                    <h2>THE MISSION</h2>
+
+                </div>
+
+                <div class="mission-statement">
+                    ONE SCRIPTURE.<br>
+                    ONE GUARDIAN.<br>
+                    ONE WORLD TO PROTECT.
+                </div>
+
+                <p>
+                    Vedha's primary mission is to protect the ninth sacred
+                    book at all costs. He must embark on a dangerous
+                    Himalayan quest, unlock his hidden potential and stop
+                    Mahabir Lama from becoming an omnipotent god.
+                </p>
+
+                <p>
+                    Along the way, Super Yodha protects innocent lives,
+                    spiritual sanctuaries and ancient knowledge while
+                    preserving the balance of the universe.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             PERSONALITY
+        =========================================== -->
+
+        <section id="personality" class="section personality-section">
+
+            <div class="section-heading">
+
+                <p>BEHIND THE ARMOR</p>
+
+                <h2>THE MAN BEHIND THE HERO</h2>
+
+            </div>
+
+
+            <div class="personality-grid">
+
+                <div class="personality-card">
+
+                    <h3>Reluctant Hero</h3>
+
+                    <p>
+                        Vedha begins as an ordinary person with no grand
+                        ambitions before being burdened with cosmic
+                        responsibility.
+                    </p>
+
+                </div>
+
+
+                <div class="personality-card">
+
+                    <h3>Street-Smart &amp; Quick-Witted</h3>
+
+                    <p>
+                        His life as an orphan and scrap dealer makes him
+                        resourceful, adaptive and practical.
+                    </p>
+
+                </div>
+
+
+                <div class="personality-card">
+
+                    <h3>Resilient</h3>
+
+                    <p>
+                        Despite vulnerability, Vedha displays courage and
+                        dedication when humanity is threatened.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-quote">
+
+                <span>"</span>
+
+                I never asked to be a hero. But when darkness came for
+                everyone, I chose to stand.
+
+                <span>"</span>
+
+            </div>
+
+
+            <div class="traits">
+
+                <span>Courageous</span>
+                <span>Resourceful</span>
+                <span>Quick-witted</span>
+                <span>Resilient</span>
+                <span>Protective</span>
+                <span>Determined</span>
+                <span>Humble</span>
+                <span>Reluctant but Responsible</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             LIVE HERO STATUS
+        =========================================== -->
+
+        <section class="section status-section">
+
+            <div class="section-heading">
+
+                <p>GUARDIAN NETWORK</p>
+
+                <h2>LIVE HERO STATUS</h2>
+
+            </div>
+
+
+            <div class="status-panel">
+
+                <div class="status-indicator">
+
+                    <span class="status-dot"></span>
+
+                    <strong>STATUS ACTIVE</strong>
+
+                </div>
+
+
+                <div class="status-grid">
+
+                    <div>
+                        <span>IDENTITY</span>
+                        <strong>VEDHA</strong>
+                    </div>
+
+                    <div>
+                        <span>TITLE</span>
+                        <strong>SUPER YODHA</strong>
+                    </div>
+
+                    <div>
+                        <span>ROLE</span>
+                        <strong>LEGACY SUPERHERO / GUARDIAN OF EARTH</strong>
+                    </div>
+
+                    <div>
+                        <span>MISSION</span>
+                        <strong>PROTECT THE NINTH SCRIPTURE</strong>
+                    </div>
+
+                    <div>
+                        <span>LOCATION</span>
+                        <strong>CLASSIFIED / HIMALAYAN REGION</strong>
+                    </div>
+
+                    <div>
+                        <span>THREAT LEVEL</span>
+                        <strong>MONITORED</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="status-story">
+
+                <p>
+                    Following a massive showdown in the Himalayas where he
+                    successfully wielded the Mirai bow to defeat the villain,
+                    Vedha has fully embraced his role as the legendary
+                    Super Yodha.
+                </p>
+
+                <p>
+                    His journey is far from over.
+                </p>
+
+                <strong>
+                    MIRAI: JAITHRAYA
+                </strong>
+
+                <p>
+                    The continuation of his adventures.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             HOW SUPER YODHA HELPS
+        =========================================== -->
+
+        <section class="section guardian-section">
+
+            <div class="section-heading">
+
+                <p>THE GUARDIAN SYSTEM</p>
+
+                <h2>HOW SUPER YODHA HELPS</h2>
+
+            </div>
+
+
+            <div class="guardian-content">
+
+                <div class="guardian-visual">
+
+                    <div class="guardian-core">
+                        ✦
+                    </div>
+
+                    <div class="guardian-ring"></div>
+
+                </div>
+
+
+                <div class="guardian-text">
+
+                    <h3>
+                        A SHIELD BETWEEN DARKNESS AND HUMANITY
+                    </h3>
+
+                    <p>
+                        Vedha acts as a literal shield between ancient,
+                        world-ending evils and innocent lives.
+                    </p>
+
+                    <ul>
+
+                        <li>Protect the ninth sacred scripture</li>
+
+                        <li>Defend innocent people</li>
+
+                        <li>Protect spiritual sanctuaries</li>
+
+                        <li>Preserve ancient knowledge</li>
+
+                        <li>Maintain the balance of the universe</li>
+
+                        <li>Defend humanity from supernatural darkness</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================================
+             HELP CHATBOT
+        =========================================== -->
+
+        <section id="help" class="section help-section">
+
+            <div class="section-heading">
+
+                <p>GUARDIAN ASSISTANCE</p>
+
+                <h2>REQUEST HELP</h2>
+
+                <p class="help-description">
+                    Tell Super Yodha what troubles you.
+                </p>
+
+            </div>
+
+
+            <div class="chat-container">
+
+                <div class="chat-header">
+
+                    <div class="chat-avatar">
+                        SY
+                    </div>
+
+                    <div>
+                        <h3>SUPER YODHA</h3>
+                        <span>Guardian Assistance System</span>
+                    </div>
+
+                    <div class="online-status">
+                        ● ONLINE
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="chat-messages"
+                    id="chatMessages"
+                    aria-live="polite">
+                </div>
+
+
+                <div class="chat-input-area">
+
+                    <input
+                        type="text"
+                        id="chatInput"
+                        placeholder="Type your answer..."
+                        autocomplete="off"
+                        aria-label="Chat response"
+                    >
+
+                    <button
+                        id="sendMessage"
+                        type="button">
+                        SEND
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer>
+
+        <div class="footer-logo">
+            SUPER YODHA
+        </div>
+
+        <p>
+            VEDHA — THE NINTH GUARDIAN
+        </p>
+
+        <p>
+            One scripture. One guardian. One world to protect.
+        </p>
+
+        <div class="footer-line"></div>
+
+        <small>
+            © 2026 Super Yodha. Original fictional superhero universe.
+        </small>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
