@@ -3,8 +3,10 @@ import sqlite3
 from datetime import datetime
 from dotenv import load_dotenv
 import os
-import resend
+import requests
 
+print("BREVO KEY LOADED:", bool(os.getenv("BREVO_API_KEY")))
+print("BREVO SENDER:", os.getenv("BREVO_SENDER_EMAIL"))
 
 # ==========================================
 # LOAD ENVIRONMENT VARIABLES
@@ -79,18 +81,44 @@ def init_database():
 
 def send_email(to_email, subject, body):
     try:
-        resend.api_key = os.getenv("RESEND_API_KEY")
+        api_key = os.getenv("BREVO_API_KEY")
+        sender_email = os.getenv("BREVO_SENDER_EMAIL")
+        print("Brevo API key loaded:", bool(api_key))
+        print("Brevo API key length:", len(api_key) if api_key else 0)
+        url = "https://api.brevo.com/v3/smtp/email"
 
-        params = {
-            "from": "onboarding@resend.dev",
-            "to": [to_email],
-            "subject": subject,
-            "text": body
+        headers = {
+            "accept": "application/json",
+            "api-key": api_key,
+            "content-type": "application/json"
         }
 
-        resend.Emails.send(params)
+        data = {
+            "sender": {
+                "name": "Super Yodha",
+                "email": sender_email
+            },
+            "to": [
+                {
+                    "email": to_email
+                }
+            ],
+            "subject": subject,
+            "textContent": body
+        }
 
-        return True
+        response = requests.post(
+            url,
+            headers=headers,
+            json=data
+        )
+
+        if response.status_code == 201:
+            print("Email sent successfully!")
+            return True
+
+        print("Email sending failed:", response.text)
+        return False
 
     except Exception as e:
         print("Email sending failed:", e)
